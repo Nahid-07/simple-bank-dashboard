@@ -1,17 +1,17 @@
-function getInputFieldValue(inputField){
-    const inputFieldId = document.getElementById(inputField);
-    const inputFieldString = inputFieldId.value;
-    const inputValue = parseFloat(inputFieldString);
-    inputFieldId.value = '';
-    return inputValue
+function getInputValue(inputId){
+    const inputField = document.getElementById(inputId);
+    const inputFieldValueString = inputField.value;
+    const inputValue = parseFloat(inputFieldValueString);
+    inputField.value = '';
+    return inputValue;
 }
-function getElementFieldValue(elementField){
-    const element = document.getElementById(elementField);
-    const elementString = element.innerText;
-    const elementValue = parseFloat(elementString);
-    return elementValue;
+function getElementValue(element){
+    const depositAmountField = document.getElementById(element);
+    let depositAmountString = depositAmountField.innerText;
+    let depositAmount = parseFloat(depositAmountString);
+    return depositAmount;
 }
-function setTextElement(elementId,newTotalDeposit){
-    const textElement = document.getElementById(elementId);
-    textElement.innerText = newTotalDeposit;
+function setValue (elementId,depositBalance){
+    const elementField = document.getElementById(elementId);
+    elementField.innerText = depositBalance;
 }
